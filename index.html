@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <pre style="color: blueviolet;">
+           
+
+Q 1 : Given array of students marks [23, 45, 67, 78, 91],  add 10 in all the elements of an array by using map and forEach function 
+Q 2 : Given array of student marks [23, 45, 67, 78, 91], find out how many students have got marks less than 65 and return the array.
+Q 3 : Return the sum of all the marks of students present in given array [23, 45, 67, 78, 91]
+Q 4 : Replace ""Peter"" with ""John"" in whole string : Given String : ""Peter is a good friend of Mike. Peter is working in a IT company in Australia"".
+Q 5 : Reverse a given string ""Hello this is me"" , result should be ""me is this Hello"".
+Q 6 : Create object by all 3 possible ways and explain with example
+Q 7 : Create an object contain name age salary as the properties, retrieve key and values in separate arrays
+Q 8 : Explain call bind and apply in JS
+Q 9 : Explain Prototype Chaining ."
+
+
+
+            </pre>
+            <pre style="color: cornflowerblue; font-size: 19px;">
+
+                let arr = [23, 45, 67, 78, 91];
+                console.log(arr.map((e)=>e+10));
+
+                let arr = [23, 45, 67, 78, 91];
+                arr.forEach(myFunction)
+                function myFunction(item, index, arr) {
+                arr[index] = item + 10;
+              }
+              console.log(arr)
+
+
+                console.log(arr.filter((e)=>e<65));
+
+                console.log(arr.reduce((e,i)=>e+i,0));
+
+
+                let r = "Peter is a good friend of Mike. Peter is working in a IT company in Australia";
+                let rr = r.replaceAll("Peter", "John");
+                console.log(rr);
+
+                let u = "Hello this is me";
+                let uu = u.split(" ").reverse().join(" ");
+                console.log(uu);
+
+                object-1)(In form of array of objects)
+                let obj1 = {
+                    name:"Harry",
+                    age:19,
+                } 
+
+                2) Function constructor
+
+                function Person(name, age){
+                    this.name=name;
+                    this.age=age;
+                }
+
+                let person1 = new Person("Harry", 23)
+
+                3)Object Constructor
+                const obj2=new Object()
+                obj2.name="Tom"
+                console.group(obj2);
+
+
+
+                let obj1={
+                    name:"Tom",
+                    age:35,
+                    salary:$60000
+                }
+
+                Object.keys(obj1);
+                console.log(obj1);
+                Object.values(obj1);
+                console.log(obj1);
+
+
+
+                let obj={
+                    name:"Mike",
+                    age:25
+                }
+                
+                
+                function print(salary)
+                {
+                    console.log(${this.name} is getting ${salary});
+                }
+                
+                
+                print.call(obj,$50000);
+                print.apply(obj,[$60000]);
+                
+                let printdata=print.bind(obj)
+                
+                printdata($45000);
+
+
+                When ever we create a object it is always attached with a  
+                Object prototype which has some hidden properities.
+
+                let arr = [];
+                Object.prototype //Parent
+
+                arr.__proto__ : (array properties)
+
+                arr.__proto__.__proto__ : (returns Object.prototype Properites)
+
+                arr.__proto__.__proto__.__proto__ :(returns null)
+
+
+
+
+
+
+
+
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
